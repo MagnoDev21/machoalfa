@@ -1,0 +1,61 @@
+/* Botão hamburguer */
+#menu {
+    color: #FFC500;
+    font-size: 35px;
+    display: inline;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+}
+
+#menu:hover {
+    color: #7F0909;
+    font-size: 35px;
+    display: inline;
+}
+
+/* Menu de navegação */
+.menu-nav {
+    display: inline-block;
+    margin-top: 12%;
+    margin-left: 10%;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #ac0e0e;
+    display: block;
+    font-size: 30px;
+    margin-top: 1%;
+}
+
+.menu-nav a:hover {
+    text-decoration: none;
+    color: #FFC500;
+    text-align: center;
+    display: block;
+    font-size: 30px;
+}
+
+/* Container do menu */
+#menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 9998;
+}
+
+/* Submenu */
+.submenu ul{
+    display: none;
+    font-size: 15px;
+}

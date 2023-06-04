@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: #040006;
+    color: #040006;
+}
+
+/* ================================================================================ */
+header {
+    background: #040006;
+    color: #ffffff;
+    border-bottom: 3px solid #d3d633;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.search {
+    margin-top: 10%;
+    text-align: center;
+}
+
+
+/* ================================================================================ */
+footer {
+    background: #040006;
+    color: #ffffff;
+    height: 400px;
+    border-top: 3px solid #d3d633;
+    align-items: center;
+    padding: 15px;
+}
+
+.contatos{
+    width: 80%;
+    display: flex;
+    text-align: center;
+    padding: 10%;
+}
+
+.left{
+    width: 60%;
+}
+
+.right{
+    width: 40%;
+}
+
+.newlester{
+    width: 80%;
+    text-align: center;
+    padding: 10%;
+    font-size: 16px;
+}

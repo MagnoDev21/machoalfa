@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Vestuário, Roupas, Blusas, Moda Masculina, Bermudas, Bonés ">
+    <meta name="description" content="O Macho Alfa é aquele que sabe se vestir.">
+    <meta name="author" content="Paulo Magno">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- título -->
+    <title>Macho Alfa</title>
+
+    <!-- links css/js -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="hamb">
+            <!-- menu hamburguer -->
+            <i id="menu" onclick="clickMenu()">&#9776;</i>
+            <!-- casas do menu -->
+            <div id="menu-container">
+                <div class="menu-nav">
+                    <a href="#">Início</a>
+                    <a href="#">Sobre Nós</a>
+                    <div class="submenu" id="submenu">
+                        <a href="#">Produtos</a>
+                        <ul>
+                            <li><a href="#">Bonés</a></li>
+                            <li><a href="#">Blusas Multimarcas</a></li>
+                            <li><a href="#">Blusas de Time</a></li>
+                            <li><a href="#">Bermudas Jeans</a></li>
+                            <li><a href="#">Bermudas de Tactel</a></li>
+                            <li><a href="#">Calças Jeans</a></li>
+                            <li><a href="#">Cuecas</a></li>
+                            <li><a href="#">Blusas Polo</a></li>
+                            <li><a href="#">Blusas Sociais</a></li>
+                            <li><a href="#">Relógios</a></li>
+                            <li><a href="#">Cordões</a></li>
+                            <li><a href="#">Pulseiras</a></li>
+                            <li><a href="#">Tênis</a></li>
+                        </ul>
+                    </div>
+                    <a href="carrinho.html">Carrinho</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo">
+            <h1>Macho Alfa</h1>
+            <h2>O Macho Alfa é aquele que sabe se vestir.</h2>
+        </div>
+
+        <div class="search">
+            <form action="index.html" method="post">
+                <div class="row">
+                    <input type="text" class="form-control" name="text_search" id="text_search" minlength="3"
+                        maxlength="20" required style="margin-bottom: 3px;">
+                    <input type="submit" class="btn btn-outline-dark" value="Procurar">
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <section>
+        <h1 style="color:aliceblue;">section</h1>
+    </section>
+
+    <main class="products">
+        <h2 style="color: aqua; margin-bottom: 20%;margin-top: 20%;">Produtos em Destaque</h2>
+
+        <div class="product">
+            <img src="produtos/camisas/HUGO.jpg" alt="HUGO">
+            <h3 id="item">Camisa HUGO</h3><br>
+            <p class="price">R$ 119.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/VERSACE.jpg" alt="VERSACE">
+            <h3>Camisa Versace</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/VERSACE2.jpg" alt="VERSACE">
+            <h3>Camisa Versace</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product" id="product">
+            <img src="produtos/camisas/DOLCE&GABBANA.jpg" alt="D&G">
+            <h3>Camisa Dolce&Gabbana</h3><br>
+            <p class="price">R$ 119.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/EMPORIOARMANI.jpg" alt="EA">
+            <h3>Camisa Empório Armani</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/BOSS.jpg" alt="BOSS">
+            <h3>Camisa BOSS</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/VERSACE3.jpg" alt="VERSACE">
+            <h3>Camisa Versace</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product" id="product">
+            <img src="produtos/camisas/gucci_b.jpg" alt="GUCCI">
+            <h3>Camisa Gucci</h3><br>
+            <p class="price">R$ 119.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/LACOSTE.jpg" alt="LACOSTE">
+            <h3>Camisa Lacoste</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/ck_verde.jpg" alt="C&K">
+            <h3>Camisa Calvin&Klein</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/GUCCI_LUIGI.jpg" alt="GUCCI">
+            <h3>Camisa Gucci</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+        <div class="product">
+            <img src="produtos/camisas/moschino.jpg" alt="MOSCHINO">
+            <h3>Camisa Moschino</h3><br>
+            <p class="price">R$ 129.99</p><br>
+            <button class="buy-btn" id="buy-btn">Comprar</button>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <div class="logo">
+            <h1>Macho Alfa</h1>
+            <h2>O Macho Alfa é aquele que sabe se vestir.</h2>
+        </div>
+
+        <div class="contatos" style="width: 80%;">
+            <div class="left">
+                <p>Contato: exemplo@example.com</p>
+                <p>Telefone: (00) 1234-5678</p>
+            </div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i>facebook</a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i>twitter</a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i>instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="newlester">
+            <form onsubmit="enviarFormulario()">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div><br>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div><br>
+
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div><br>
+
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                </div><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <p style="text-align: center;">Todos os direitos reservados. © 2023</p>
+    </footer>
+
+
+
+    <script>
+
+         // Array para armazenar os produtos selecionados
+         var produtosSelecionados = [];
+
+// Adicione um evento de clique aos botões "Comprar"
+var botoesComprar = document.querySelectorAll('.buy-btn');
+for (var i = 0; i < botoesComprar.length; i++) {
+    botoesComprar[i].addEventListener('click', adicionarAoCarrinho);
+}
+
+// Função para adicionar o produto ao carrinho
+function adicionarAoCarrinho(event) {
+    var produto = event.target.parentNode;
+    var nome = produto.querySelector('h3').innerText;
+    var preco = produto.querySelector('.price').innerText;
+
+    // Crie um objeto para representar o produto
+    var novoProduto = {
+        nome: nome,
+        preco: preco
+    };
+
+    // Adicione o produto ao array de produtos selecionados
+    produtosSelecionados.push(novoProduto);
+
+    // Limpe os dados do produto armazenados em localStorage (opcional)
+    localStorage.removeItem('produtosSelecionados');
+
+    // Armazene o array de produtos selecionados em localStorage
+    localStorage.setItem('produtosSelecionados', JSON.stringify(produtosSelecionados));
+
+}
+
+//========================================================================================================================================
+
+
+    // Adicione um evento de clique ao botão "Comprar"
+    var comprarBtn = document.getElementById('wpp-btn');
+    comprarBtn.addEventListener('click', function () {
+      // Verifica se há produtos selecionados
+      if (produtosSelecionados && produtosSelecionados.length > 0) {
+        var listaProdutos = '';
+        for (var i = 0; i < produtosSelecionados.length; i++) {
+          listaProdutos += produtosSelecionados[i].nome + ', ';
+        }
+        listaProdutos = listaProdutos.slice(0, -2); // Remove a última vírgula e espaço
+
+        var mensagem = encodeURIComponent('Olá, gostaria de comprar os seguintes produtos:\n' + listaProdutos);
+
+        // Redireciona para o WhatsApp com a mensagem
+        var urlWhatsApp = 'https://api.whatsapp.com/send?phone=+5521967848122&text=' + mensagem;
+        window.open(urlWhatsApp, '_blank');
+      }
+      });
+
+//========================================================================================================================================
+
+        // Função para enviar o formulário via WhatsApp
+        function enviarFormulario() {
+            // Recupere os valores dos campos do formulário
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var telefone = document.getElementById('telefone').value;
+            var mensagem = document.getElementById('mensagem').value;
+
+            // Formate a mensagem a ser enviada no WhatsApp
+            var mensagemWhatsApp = 'Nome: ' + nome + ' ' +
+                'Email: ' + email + ' ' +
+                'Telefone: ' + telefone + ' ' +
+                'Mensagem: ' + mensagem;
+
+            // Crie o link do WhatsApp com os dados do formulário
+            var linkWhatsApp = 'https://api.whatsapp.com/send?phone=+5521995716949&text=' + encodeURIComponent(mensagemWhatsApp);
+
+            // Abra o link do WhatsApp em uma nova janela
+            window.open(linkWhatsApp);
+        }
+
+    </script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Vestuário, Roupas, Blusas, Moda Masculina, Bermudas, Bonés ">
+    <meta name="description" content="O Macho Alfa é aquele que sabe se vestir.">
+    <meta name="author" content="Paulo Magno">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- título -->
+    <title>Macho Alfa - Carrinho</title>
+
+    <!-- links css/js -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <style>
+        h1 {
+            color: aliceblue;
+            text-align: center;
+        }
+
+        #carrinho {
+            color: aliceblue;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .remover-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1E90FF;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 8px;
+            margin-bottom: 13px;
+        }
+
+        .wpp-btn {
+            text-align: center;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1E90FF;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 8px;
+            margin-bottom: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="hamb">
+            <!-- menu hamburguer -->
+            <i id="menu" onclick="clickMenu()">&#9776;</i>
+            <!-- casas do menu -->
+            <div id="menu-container">
+                <div class="menu-nav">
+                    <a href="index.html">Início</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo">
+            <h1>Macho Alfa</h1>
+            <h2>O Macho Alfa é aquele que sabe se vestir.</h2>
+        </div>
+
+        <div class="search">
+            <form action="index.php" method="post">
+                <div class="row">
+                    <input type="text" class="form-control" name="text_search" id="text_search" minlength="3"
+                        maxlength="20" required style="margin-bottom: 3px;">
+                    <input type="submit" class="btn btn-outline-dark" value="Procurar">
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <section>
+        <h1 style="color:aliceblue;">section</h1>
+    </section>
+    <div class="cart">
+        <h1>Carrinho de Compras</h1>
+        <div id="carrinho">
+            <!-- Os detalhes do pedido serão inseridos aqui -->
+
+
+        </div>
+
+        <button class="buy-btn" id="wpp-btn">Comprar</button>
+    </div>
+    <script>
+
+        // Recupere o array de produtos selecionados armazenado em localStorage
+        var produtosSelecionados = JSON.parse(localStorage.getItem('produtosSelecionados'));
+
+        // Exiba os produtos selecionados na página do carrinho
+        var carrinho = document.getElementById('carrinho');
+        if (produtosSelecionados && produtosSelecionados.length > 0) {
+            var produtosHTML = '';
+            var total = 0; // Variável para armazenar o valor total dos produtos
+            for (var i = 0; i < produtosSelecionados.length; i++) {
+                produtosHTML += '<p>Produto: ' + produtosSelecionados[i].nome + '</p>' +
+                    '<p>Preço: ' + produtosSelecionados[i].preco + '</p>' +
+                    '<button class="remover-btn" data-index="' + i + '">Remover</button><br>';
+
+                // Calcula o valor total dos produtos
+                var preco = parseFloat(produtosSelecionados[i].preco.replace('R$ ', ''));
+                total += preco;
+            }
+            carrinho.innerHTML = produtosHTML;
+
+            // Exibe o valor total na página do carrinho
+            var totalElement = document.createElement('p');
+            totalElement.innerHTML = 'Total: R$ <span id="total"></span>';
+            carrinho.appendChild(totalElement);
+
+            var totalSpan = document.getElementById('total');
+            totalSpan.textContent = total.toFixed(2);
+
+            // Adicione um evento de clique aos botões "Remover"
+            var botoesRemover = document.querySelectorAll('.remover-btn');
+            for (var j = 0; j < botoesRemover.length; j++) {
+                botoesRemover[j].addEventListener('click', removerItem);
+            }
+        } else {
+            carrinho.innerHTML = '<p>Nenhum produto selecionado.</p>';
+        }
+
+        // Função para remover um item do carrinho
+        function removerItem(event) {
+            var index = event.target.dataset.index;
+            produtosSelecionados.splice(index, 1);
+            localStorage.setItem('produtosSelecionados', JSON.stringify(produtosSelecionados));
+            location.reload(); // Recarrega a página para refletir a alteração
+        }
+//================================================================================================================================================
+
+        // Adicione um evento de clique ao botão "Comprar"
+        var comprarBtn = document.getElementById('wpp-btn');
+        comprarBtn.addEventListener('click', function () {
+            // Verifica se há produtos selecionados
+            if (produtosSelecionados && produtosSelecionados.length > 0) {
+                var listaProdutos = '';
+                var total = 0; // Variável para armazenar o valor total dos produtos
+                for (var i = 0; i < produtosSelecionados.length; i++) {
+                    listaProdutos += produtosSelecionados[i].nome + ', ';
+                    // Calcula o valor total dos produtos
+                    var preco = parseFloat(produtosSelecionados[i].preco.replace('R$ ', ''));
+                    total += preco;
+                }
+                listaProdutos = listaProdutos.slice(0, -2); // Remove a última vírgula e espaço
+
+                var mensagem = encodeURIComponent('Olá, gostaria de comprar os seguintes produtos:\n' + listaProdutos +
+                    '\nValor Total: R$ ' + total.toFixed(2));
+
+                // Redireciona para o WhatsApp com a mensagem
+                var urlWhatsApp = 'https://api.whatsapp.com/send?phone=+5521967848122&text=' + mensagem;
+                window.open(urlWhatsApp, '_blank');
+            }
+        });
+
+
+
+    </script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>
